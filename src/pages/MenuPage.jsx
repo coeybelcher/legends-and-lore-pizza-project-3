@@ -4,15 +4,18 @@ export default function MenuPage() {
   const { pizzas } = useApp();
 
   return (
-    <div>
+    <div className="page">
       <h2>Menu</h2>
-      {pizzas.map(p => (
-        <div key={p.id}>
-          <h3>{p.name}</h3>
-          <p>{p.description}</p>
-          <p>${p.price}</p>
-        </div>
-      ))}
+
+      <div className="card-grid">
+        {pizzas.map((p) => (
+          <div className="card" key={p.id}>
+            <h3>{p.name}</h3>
+            <p>{p.description}</p>
+            <p><strong>${p.price}</strong></p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
