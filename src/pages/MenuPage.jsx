@@ -10,6 +10,7 @@ export default function MenuPage() {
       <div className="card-grid">
         {pizzas.map((p) => (
           <div className="card" key={p.id}>
+            <img src={p.image} alt={p.name} className="pizza-img" />
             <h3>{p.name}</h3>
             <p>{p.description}</p>
             <p><strong>${p.price}</strong></p>
